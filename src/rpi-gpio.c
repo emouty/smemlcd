@@ -43,7 +43,7 @@ int gpio_init() {
     int mem_fd;
     void *gpio_map;
 
-    if ((mem_fd = open("/dev/mem", O_RDWR | O_SYNC)) < 0) {
+    if ((mem_fd = open("/dev/gpiomem", O_RDWR | O_SYNC)) < 0) {
         fprintf(stderr, "Cannot open /dev/mem\n");
         return -1;
     }
